@@ -7,7 +7,6 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import *
 from google.auth.exceptions import *
 
-
 def get_credentials():
     scopes =['https://www.googleapis.com/auth/gmail.settings.basic', 'https://www.googleapis.com/auth/gmail.settings.sharing']
     credentials = service_account.Credentials.from_service_account_file('token.json', scopes=scopes)
@@ -15,7 +14,6 @@ def get_credentials():
         raise Exception('No credential file selected, so stopping')
 
     return credentials
-
 
 def get_users():
     try:
@@ -25,7 +23,6 @@ def get_users():
         print('Could not open the users.json file')
         raise
 
-
 def get_template():
     try:
         sig_file = open('template.html', 'r')
@@ -33,7 +30,6 @@ def get_template():
     except (FileNotFoundError, IOError):
         print('Could not open the template.html file')
         raise
-
 
 def update_sig(credentials, user):
     credentials_delegated = credentials.with_subject(user['username'])
@@ -53,13 +49,11 @@ def update_sig(credentials, user):
     else:
         print(f"Could not find primary address for: {user['username']}")
 
-
 def test_credentials(credentials, user):
     credentials_delegated = credentials.with_subject(user['username'])
     gmail_service = build('gmail', 'v1', credentials=credentials_delegated)
     addresses = gmail_service.users().settings().sendAs().list(userId='me').execute()
     print(addresses)
-
 
 def main():
     credentials = get_credentials()
@@ -69,7 +63,6 @@ def main():
 
 #     for user in users:
 #         update_sig(credentials, user)
-
 
 if __name__ == '__main__':
     main()
