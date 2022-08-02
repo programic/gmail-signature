@@ -1,0 +1,14 @@
+[
+  {
+    "username": "john.doe@domain.tld",
+    "full_name": "John Doe",
+    "job_title": "Co-Founder at HelloWorld",
+    "working_days": "Available: Tu - Fr<br>"
+  },
+  {
+    "username": "jane.doe@domain.tld",
+    "full_name": "Jane Doe",
+    "job_title": "Co-Founder at HelloWorld",
+    "working_days": ""
+  }
+]
