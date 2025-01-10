@@ -2,13 +2,11 @@
   {
     "username": "john.doe@domain.tld",
     "full_name": "John Doe",
-    "job_title": "Co-Founder at HelloWorld",
-    "working_days": "Available: Tu - Fr<br>"
+    "job_title": "Co-Founder at HelloWorld"
   },
   {
     "username": "jane.doe@domain.tld",
     "full_name": "Jane Doe",
-    "job_title": "Co-Founder at HelloWorld",
-    "working_days": ""
+    "job_title": "Co-Founder at HelloWorld"
   }
 ]
