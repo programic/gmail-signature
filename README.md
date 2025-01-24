@@ -11,7 +11,7 @@ A good example to get service account credentials from Google Cloud Console.
 1. Copy `template.example.html` to `template.html` and modify the file. 
 2. Copy `users.example.json` to `users.json` and modify the file.
 
-## 3. Build and run
+## 3. Build and run Containers
 ```bash
 # Build the Docker image
 docker build -t gmail-signature .
@@ -19,3 +19,16 @@ docker build -t gmail-signature .
 # Run the script inside a container
 cat script.py | docker run -i --rm -v `pwd`:/data -w /data gmail-signature
 ```
+
+## 3. Alternative Build and run UV
+```bash
+uv run script.py
+```
+
+### 4. Run Google script
+1. Go to `script.google.com`
+2. Paste content of workspace2json.gs inside editor
+3. Adjust values to match your domain
+4. Run script, and give permission of admin user
+5. Find json in admin drive.
+6. Use json to run script
