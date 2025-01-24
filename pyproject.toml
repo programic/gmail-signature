@@ -1,0 +1,10 @@
+[project]
+name = "gmail-signature"
+version = "0.1.0"
+description = "Script to bulk-update Gmail signatures for Google Workspace."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-api-python-client>=2.159.0",
+    "google>=3.0.0",
+]
