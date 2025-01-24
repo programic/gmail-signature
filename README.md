@@ -24,3 +24,11 @@ cat script.py | docker run -i --rm -v `pwd`:/data -w /data gmail-signature
 ```bash
 uv run script.py
 ```
+
+### 4. Run Google script
+1. Go to `script.google.com`
+2. Paste content of workspace2json.gs inside editor
+3. Adjust values to match your domain
+4. Run script, and give permission of admin user
+5. Find json in admin drive.
+6. Use json to run script
